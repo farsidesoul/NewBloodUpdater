@@ -45,11 +45,19 @@ namespace New_Blood_Updater
                 if (deleteCache == DialogResult.Yes)
                 {
                     // Displays to user files are downloading
-                    button1.Text = "Downloading...";
+                    label1.Text = "Downloading...";
 
                     // Deletes the cache folder
                     string cacheToDelete = textBox2.Text + "\\cache\\";
-                    Directory.Delete(cacheToDelete, true);
+                    try
+                    {
+                        Directory.Delete(cacheToDelete, true);
+                    }
+                    catch (DirectoryNotFoundException ex)
+                    {
+                        
+                    }
+                    
 
                     // File location for download and save path of Patch-4.MPQ
                     WebClient Download_Patch4 = new WebClient();
@@ -61,7 +69,7 @@ namespace New_Blood_Updater
 
                     // Alerts user downloads complete and changess download button to reflect
                     MessageBox.Show("Downloads completed successfully.");
-                    button1.Text = "Download";
+                    label1.Text = "";
                 }
                 // if user does not wish to delete their Cache, do nothing.
                 else if (deleteCache == DialogResult.No)

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("New Blood Updater")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Updates Wow files to enable play on Ghosts of New Blood Server")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("New Blood Updater")]

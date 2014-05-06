@@ -83,16 +83,7 @@ namespace New_Blood_Updater
             }
         }
 
-        private void Completed(object sender, AsyncCompletedEventArgs e)
-        {
-            MessageBox.Show("Downloading Successful", "Download_Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            
-        }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog Save = new FolderBrowserDialog();

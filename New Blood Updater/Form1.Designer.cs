@@ -84,6 +84,7 @@
             this.textBox1.Size = new System.Drawing.Size(625, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "https://www.dropbox.com/s/znbijjvtu8nyxdq/patch-4.mpq";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -106,6 +107,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(625, 20);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "https://www.dropbox.com/s/u8e12yh37xzcesy/realmlist.wtf";
             // 
             // Form1
             // 

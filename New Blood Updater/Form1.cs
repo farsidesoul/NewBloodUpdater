@@ -12,8 +12,14 @@ namespace New_Blood_Updater
 {
     public partial class Form1 : Form
     {
+        string wowExeLocation = "";
+        string patchLocation = "";
+        string realmListLocation = "";
+
         public Form1()
         {
+            
+
             InitializeComponent();
             try
             {
@@ -31,15 +37,26 @@ namespace New_Blood_Updater
         {
             if (textBox2.Text == String.Empty)
             {
-                MessageBox.Show("Please select a destination to save the file");
+                MessageBox.Show("Please select your base WoW folder.");
             }
             else
             {
-                WebClient Download_Client = new WebClient();
-                Download_Client.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-                Download_Client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-                Download_Client.DownloadFileAsync(new Uri(textBox1.Text.Trim().ToString()), textBox2.Text.Trim());
-                Download_Client.DownloadFileAsync(new Uri(textBox3.Text.Trim().ToString()), textBox2.Text.Trim());
+                WebClient Download_Patch4 = new WebClient();
+                Download_Patch4.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+                Download_Patch4.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+                Download_Patch4.DownloadFile(new Uri(textBox1.Text.Trim().ToString()), textBox2.Text.Trim() + "\\data\\patch-4.MPQ");
+
+                //while (Download_Patch4.IsBusy)
+                //{
+
+                //}
+                //Download_Patch4.Dispose();
+
+                WebClient Download_RealmList = new WebClient();
+                Download_RealmList.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+                Download_RealmList.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+                Download_RealmList.DownloadFileAsync(new Uri(textBox3.Text.Trim().ToString()), textBox2.Text.Trim() + "\\data\\enUS\\realmlist.wtf");
+                
             }
         }
 
@@ -60,6 +77,13 @@ namespace New_Blood_Updater
             if (Save.ShowDialog() == DialogResult.OK)
             {
                 textBox2.Text = Save.SelectedPath;
+                string saveLocation = textBox2.Text;
+                System.IO.File.WriteAllText(@"C:\Users\Public\Documents\Updater.txt", saveLocation);
+                wowExeLocation = textBox2.Text + "\\wow.exe";
+                patchLocation = textBox2.Text + "\\data\\";
+                realmListLocation = textBox2.Text + "\\data\\enUS\\";
+            } else {
+                MessageBox.Show("Please select your base WoW folder (the one with Wow.exe in it)");
             }
 
             string Text = textBox1.Text.ToString();
@@ -70,10 +94,17 @@ namespace New_Blood_Updater
                 {
                     textBox2.Text += "\\" + arry[i].ToString();
                 }
-            }
+            }            
+        }
 
-            string saveLocation = textBox2.Text;
-            System.IO.File.WriteAllText(@"C:\Users\Public\Documents\Updater.txt", saveLocation);
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

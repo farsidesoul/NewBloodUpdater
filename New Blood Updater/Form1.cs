@@ -44,20 +44,19 @@ namespace New_Blood_Updater
                 DialogResult deleteCache = MessageBox.Show("This will also delete your WoW Cache folder. \n\tDo you wish to continue?", "Delete Cache?", MessageBoxButtons.YesNo);
                 if (deleteCache == DialogResult.Yes)
                 {
-                    // Displays to user files are downloading
-                    label1.Text = "Downloading...";
-
                     // Deletes the cache folder
                     string cacheToDelete = textBox2.Text + "\\cache\\";
+                    label1.Text = "Deleting Cache...";
                     try
                     {
                         Directory.Delete(cacheToDelete, true);
                     }
                     catch (DirectoryNotFoundException ex)
                     {
-                        
+                        label1.Text = "Cache not found, continuing.";
                     }
-                    
+                    // Displays to user files are downloading
+                    label1.Text = "Downloading...";
 
                     // File location for download and save path of Patch-4.MPQ
                     WebClient Download_Patch4 = new WebClient();
@@ -103,9 +102,12 @@ namespace New_Blood_Updater
                 textBox2.Text = Save.SelectedPath;
                 string saveLocation = textBox2.Text;
                 System.IO.File.WriteAllText(@"C:\Users\Public\Documents\Updater.txt", saveLocation);
-            } else {
-                MessageBox.Show("Please select your base WoW folder (the one with Wow.exe in it)");
-            }          
+            } 
+            if (!File.Exists(textBox2.Text + "\\wow.exe")) 
+            {
+                MessageBox.Show("Unable to detect Wow.exe within this folder.\nPlease select another folder.");
+            }      
+    
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

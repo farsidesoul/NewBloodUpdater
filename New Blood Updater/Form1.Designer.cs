@@ -83,7 +83,7 @@ namespace New_Blood_Updater
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(259, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "http://members.iinet.net.au/~mooimmo/patch-4.mpq";
+            this.textBox1.Text = "";
             this.textBox1.Visible = false;
             // 
             // textBox2
@@ -100,7 +100,7 @@ namespace New_Blood_Updater
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(259, 20);
             this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "http://members.iinet.net.au/~mooimmo/realmlist.wtf";
+            this.textBox3.Text = "";
             this.textBox3.Visible = false;
             // 
             // button3

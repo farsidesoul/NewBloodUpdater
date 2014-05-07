@@ -23,7 +23,7 @@ namespace New_Blood_Updater
                 string saveLocated = System.IO.File.ReadAllText(@"C:\Users\Public\Documents\Updater.txt");
                 textBox2.Text = saveLocated;
             }
-            catch (Exception ex)
+            catch (FileNotFoundException ex)
             {
                 // Change textBox2 location to default
                 textBox2.Text = "C:\\Program Files (x86)\\World of Warcraft";
@@ -46,14 +46,13 @@ namespace New_Blood_Updater
                 {
                     // Deletes the cache folder
                     string cacheToDelete = textBox2.Text + "\\cache\\";
-                    label1.Text = "Deleting Cache...";
                     try
                     {
                         Directory.Delete(cacheToDelete, true);
                     }
                     catch (DirectoryNotFoundException ex)
                     {
-                        label1.Text = "Cache not found, continuing.";
+
                     }
                     // Displays to user files are downloading
                     label1.Text = "Downloading...";

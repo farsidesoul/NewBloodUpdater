@@ -83,11 +83,13 @@ namespace New_Blood_Updater
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(259, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "http://members.iinet.net.au/~mooimmo/patch-4.mpq";
+            this.textBox1.Text = "http://www.dropbox.com/s/s3nni1lcpixm3m9/patch-4.mpq?dl=1";
             this.textBox1.Visible = false;
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(144, 282);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(438, 20);
@@ -100,7 +102,7 @@ namespace New_Blood_Updater
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(259, 20);
             this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "http://members.iinet.net.au/~mooimmo/realmlist.wtf";
+            this.textBox3.Text = "http://www.dropbox.com/s/pgjzwwsa4h1jqf6/realmlist.wtf?dl=1";
             this.textBox3.Visible = false;
             // 
             // button3

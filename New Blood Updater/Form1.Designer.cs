@@ -30,104 +30,104 @@ namespace New_Blood_Updater
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.downloadButton = new System.Windows.Forms.Button();
+            this.browseButton = new System.Windows.Forms.Button();
+            this.selectionLabel = new System.Windows.Forms.Label();
+            this.tb_patchLocation = new System.Windows.Forms.TextBox();
+            this.tb_wowFolderLocation = new System.Windows.Forms.TextBox();
+            this.tb_realmListLocation = new System.Windows.Forms.TextBox();
+            this.launchButton = new System.Windows.Forms.Button();
+            this.downloadStatusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // downloadButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(144, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 50);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.downloadButton.BackColor = System.Drawing.Color.Transparent;
+            this.downloadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadButton.BackgroundImage")));
+            this.downloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.downloadButton.FlatAppearance.BorderSize = 0;
+            this.downloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadButton.ForeColor = System.Drawing.Color.Transparent;
+            this.downloadButton.Location = new System.Drawing.Point(144, 311);
+            this.downloadButton.Name = "downloadButton";
+            this.downloadButton.Size = new System.Drawing.Size(235, 50);
+            this.downloadButton.TabIndex = 0;
+            this.downloadButton.UseVisualStyleBackColor = false;
+            this.downloadButton.Click += new System.EventHandler(this.downloadButton_Click);
             // 
-            // button2
+            // browseButton
             // 
-            this.button2.Location = new System.Drawing.Point(588, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.browseButton.Location = new System.Drawing.Point(588, 282);
+            this.browseButton.Name = "browseButton";
+            this.browseButton.Size = new System.Drawing.Size(75, 23);
+            this.browseButton.TabIndex = 1;
+            this.browseButton.Text = "Browse";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
-            // label2
+            // selectionLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(335, 266);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Select your WoW Directory:";
+            this.selectionLabel.AutoSize = true;
+            this.selectionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.selectionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.selectionLabel.Location = new System.Drawing.Point(335, 266);
+            this.selectionLabel.Name = "selectionLabel";
+            this.selectionLabel.Size = new System.Drawing.Size(139, 13);
+            this.selectionLabel.TabIndex = 3;
+            this.selectionLabel.Text = "Select your WoW Directory:";
             // 
-            // textBox1
+            // tb_patchLocation
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(259, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "http://www.dropbox.com/s/s3nni1lcpixm3m9/patch-4.mpq?dl=1";
-            this.textBox1.Visible = false;
+            this.tb_patchLocation.Location = new System.Drawing.Point(12, 12);
+            this.tb_patchLocation.Name = "tb_patchLocation";
+            this.tb_patchLocation.ReadOnly = true;
+            this.tb_patchLocation.Size = new System.Drawing.Size(259, 20);
+            this.tb_patchLocation.TabIndex = 4;
+            this.tb_patchLocation.Text = "http://www.dropbox.com/s/s3nni1lcpixm3m9/patch-4.mpq?dl=1";
+            this.tb_patchLocation.Visible = false;
             // 
-            // textBox2
+            // tb_wowFolderLocation
             // 
-            this.textBox2.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(144, 282);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(438, 20);
-            this.textBox2.TabIndex = 5;
+            this.tb_wowFolderLocation.BackColor = System.Drawing.Color.NavajoWhite;
+            this.tb_wowFolderLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_wowFolderLocation.Location = new System.Drawing.Point(144, 282);
+            this.tb_wowFolderLocation.Name = "tb_wowFolderLocation";
+            this.tb_wowFolderLocation.Size = new System.Drawing.Size(438, 20);
+            this.tb_wowFolderLocation.TabIndex = 5;
             // 
-            // textBox3
+            // tb_realmListLocation
             // 
-            this.textBox3.Location = new System.Drawing.Point(545, 12);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(259, 20);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "http://www.dropbox.com/s/pgjzwwsa4h1jqf6/realmlist.wtf?dl=1";
-            this.textBox3.Visible = false;
+            this.tb_realmListLocation.Location = new System.Drawing.Point(545, 12);
+            this.tb_realmListLocation.Name = "tb_realmListLocation";
+            this.tb_realmListLocation.ReadOnly = true;
+            this.tb_realmListLocation.Size = new System.Drawing.Size(259, 20);
+            this.tb_realmListLocation.TabIndex = 7;
+            this.tb_realmListLocation.Text = "http://www.dropbox.com/s/pgjzwwsa4h1jqf6/realmlist.wtf?dl=1";
+            this.tb_realmListLocation.Visible = false;
             // 
-            // button3
+            // launchButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(428, 311);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(235, 50);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.launchButton.BackColor = System.Drawing.Color.Transparent;
+            this.launchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("launchButton.BackgroundImage")));
+            this.launchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.launchButton.FlatAppearance.BorderSize = 0;
+            this.launchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.launchButton.Location = new System.Drawing.Point(428, 311);
+            this.launchButton.Name = "launchButton";
+            this.launchButton.Size = new System.Drawing.Size(235, 50);
+            this.launchButton.TabIndex = 8;
+            this.launchButton.UseVisualStyleBackColor = false;
+            this.launchButton.Click += new System.EventHandler(this.launchButton_Click);
             // 
-            // label1
+            // downloadStatusLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(363, 376);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 9;
+            this.downloadStatusLabel.AutoSize = true;
+            this.downloadStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.downloadStatusLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.downloadStatusLabel.Location = new System.Drawing.Point(363, 376);
+            this.downloadStatusLabel.Name = "downloadStatusLabel";
+            this.downloadStatusLabel.Size = new System.Drawing.Size(0, 13);
+            this.downloadStatusLabel.TabIndex = 9;
             // 
             // Form1
             // 
@@ -135,14 +135,14 @@ namespace New_Blood_Updater
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(816, 398);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.downloadStatusLabel);
+            this.Controls.Add(this.launchButton);
+            this.Controls.Add(this.tb_realmListLocation);
+            this.Controls.Add(this.tb_wowFolderLocation);
+            this.Controls.Add(this.tb_patchLocation);
+            this.Controls.Add(this.selectionLabel);
+            this.Controls.Add(this.browseButton);
+            this.Controls.Add(this.downloadButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Ghost of New Blood Updater";
@@ -153,14 +153,14 @@ namespace New_Blood_Updater
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button downloadButton;
+        private System.Windows.Forms.Button browseButton;
+        private System.Windows.Forms.Label selectionLabel;
+        private System.Windows.Forms.TextBox tb_patchLocation;
+        private System.Windows.Forms.TextBox tb_wowFolderLocation;
+        private System.Windows.Forms.TextBox tb_realmListLocation;
+        private System.Windows.Forms.Button launchButton;
+        private System.Windows.Forms.Label downloadStatusLabel;
     }
 }
 

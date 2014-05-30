@@ -17,7 +17,8 @@ namespace New_Blood_Updater
                 string saveLocated = File.ReadAllText(@"C:\Users\Public\Documents\Updater.txt");
                 tb_wowFolderLocation.Text = saveLocated;
             }
-            catch (FileNotFoundException ex)
+
+            catch (FileNotFoundException)
             {
                 // Change tb_wowFolderLocation location to default
                 tb_wowFolderLocation.Text = @"C:\Program Files (x86)\World of Warcraft";
@@ -58,17 +59,21 @@ namespace New_Blood_Updater
 			{
 				Directory.Delete(cacheToDelete, true);
 			}
-			catch (DirectoryNotFoundException ex)
+			catch (DirectoryNotFoundException)
 			{
-
+                // Do nothing
 			}
 			// Displays to user files are downloading
 			//Name labels appropriately
 			downloadStatusLabel.Text = @"Downloading...";
 
 			// File location for download and save path of Patch-4.MPQ
-			WebClient downloadPatch4 = new WebClient();
-			downloadPatch4.DownloadFile(tb_patchLocation.Text.Trim(), tb_wowFolderLocation.Text.Trim() + @"\data\patch-4.MPQ");
+			//WebClient downloadPatch4 = new WebClient();
+			//downloadPatch4.DownloadFile(tb_patchLocation.Text.Trim(), tb_wowFolderLocation.Text.Trim() + @"\data\patch-4.MPQ");
+
+            // file location for download and save path of Patch-5.MPQ
+            WebClient downloadPatch5 = new WebClient();
+            downloadPatch5.DownloadFile(tb_patch5Location.Text.Trim(), tb_wowFolderLocation.Text.Trim() + @"\data\patch-5.MPQ");
 
 			// File location for download and save path of realmlist.wtf
 			WebClient downloadRealmList = new WebClient();
@@ -98,7 +103,7 @@ namespace New_Blood_Updater
 			second condition will not be triggered unless first one is true
 			also you can use only !File.Exists(tb_wowFolderLocation.Text + "\\wow.exe") because "" file doesn't exist also ;)
 			*/
-            if (tb_wowFolderLocation.Text == String.Empty && !File.Exists(tb_wowFolderLocation.Text + @"\wow.exe")) 
+            if (!File.Exists(tb_wowFolderLocation.Text + @"\wow.exe")) 
             {
                 NoWowExeFound();
 				return;

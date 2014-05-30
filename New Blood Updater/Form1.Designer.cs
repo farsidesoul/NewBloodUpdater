@@ -38,6 +38,7 @@ namespace New_Blood_Updater
             this.tb_realmListLocation = new System.Windows.Forms.TextBox();
             this.launchButton = new System.Windows.Forms.Button();
             this.downloadStatusLabel = new System.Windows.Forms.Label();
+            this.tb_patch5Location = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // downloadButton
@@ -129,12 +130,23 @@ namespace New_Blood_Updater
             this.downloadStatusLabel.Size = new System.Drawing.Size(0, 13);
             this.downloadStatusLabel.TabIndex = 9;
             // 
+            // tb_patch5Location
+            // 
+            this.tb_patch5Location.Location = new System.Drawing.Point(12, 38);
+            this.tb_patch5Location.Name = "tb_patch5Location";
+            this.tb_patch5Location.ReadOnly = true;
+            this.tb_patch5Location.Size = new System.Drawing.Size(259, 20);
+            this.tb_patch5Location.TabIndex = 10;
+            this.tb_patch5Location.Text = "http://www.dropbox.com/s/1wmetcab31tggxg/patch-5.mpq?dl=1";
+            this.tb_patch5Location.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(816, 398);
+            this.Controls.Add(this.tb_patch5Location);
             this.Controls.Add(this.downloadStatusLabel);
             this.Controls.Add(this.launchButton);
             this.Controls.Add(this.tb_realmListLocation);
@@ -161,6 +173,7 @@ namespace New_Blood_Updater
         private System.Windows.Forms.TextBox tb_realmListLocation;
         private System.Windows.Forms.Button launchButton;
         private System.Windows.Forms.Label downloadStatusLabel;
+        private System.Windows.Forms.TextBox tb_patch5Location;
     }
 }
 
